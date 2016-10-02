@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Sujets Résolus' %}
+
+{% block body %}
+    <a href="{{ path('subject_add') }}">Ajouter un nouveau sujet </a>
+    <a href="{{ path('subject_index') }}"> Sujets  </a>
+    {% for subject in subjects %}
+
+    {{ include('subjects/subjects_resolvedsingle.html.twig', { 'subject': subject }) }}
+
+
+
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Sujets' %}
+
+{% block body %}
+    {% for subject in subjects %}
+
+    {{ include('subjects/subjects_single.html.twig', { 'subject': subject }) }}
+
+
+
+    {% endfor %}
+{% endblock %}

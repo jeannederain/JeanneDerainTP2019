@@ -1,0 +1,8 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: mysql
+    database_port: null
+    database_name: wsf
+    database_user: wsf
+    database_password: wsf
+    secret: ThisTokenIsNotSoSecretChangeIt

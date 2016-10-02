@@ -1,0 +1,22 @@
+
+
+    <article class="card card-block {% if subject.vote < 0 %}Negative{% endif %}">
+        <h3 class="card-title"> <a href="{{ path('subject_single', {id:subject.id}) }}"> {{ subject.title }}  </a>   </h3>
+        <section class="card-text">{{ subject.description }}</section>
+        <span class="card-text">
+            <small class="text-muted">
+                {{ subject.updatedAt|localizeddate }}
+                </small>
+
+                <div class="col-lg-2">
+                <p> Votes:   {{ subject.vote}} </p>
+                </div>
+          </span>
+
+
+                <a class="delete" href="{{ path('subject_delete', {id:subject.id}) }}"> supprimer </a>
+
+
+                    <a class="btn-vote" href="{{ path('subject_upvote', {id:subject.id}) }}">  UpVote </a>
+                    <a class="btn-vote" href="{{ path('subject_downvote', {id:subject.id}) }}">  DownVote </a>
+    </article>

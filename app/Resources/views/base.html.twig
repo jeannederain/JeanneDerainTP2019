@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}WSF{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
+
+    </head>
+    <body>
+        <section class="container">
+          <div class="row">
+            <div class="col-lg-6">
+            <h1>WSF - TP Symfony Jeanne Derain</h1>
+            <main>
+                <h2>{{ block('title') }}</h2>
+              </div>
+                <div id="menu" class="col-lg-3 col-lg-offset-3">
+                    <a href="{{ path('subject_add') }}" class="menu">Ajouter un nouveau sujet </a>
+                    <a href="{{ path('subject_resolvedindex') }}" class="menu"> Sujets Résolus </a>
+                    <a href="{{ path('subject_index') }}" class="menu"> Sujets Non Résolus </a>
+
+                </div>
+            </div>
+                <section>
+                    {% block body %}{% endblock %}
+                </section>
+            </main>
+        </section>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

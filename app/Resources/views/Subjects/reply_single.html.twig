@@ -1,0 +1,14 @@
+<article class="card card-block">
+    <h4 class="card-title nom-auteur"> {{reply.author}} </h4>
+    <section class="card-text">
+      <p class="email-auteur">{{reply.authorEmail}} </p>
+      <span class="commentaire"> {{reply.comment}} </span>
+      <span class="vote"> {{reply.vote}} </span>
+      <a class="btn-vote" href="{{ path('upvotereply', {id:reply.id}) }}">  UpVote </a>
+      <a class="btn-vote" href="{{ path('downvotereply', {id:reply.id}) }}">  DownVote </a>
+
+      <a class="delete" href="{{ path('reply_delete', {id:reply.id}) }}"> supprimer </a>
+
+    </section>
+
+</article>

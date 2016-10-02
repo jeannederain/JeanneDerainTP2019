@@ -1,0 +1,56 @@
+.formulaire {
+  margin: auto;
+  background-color: #DCDCDC;
+  padding: 1em;
+  border-radius: 2%;
+  margin-top: 1em;
+}
+
+.formulaire label {
+  font-weight: bold;
+}
+
+.email-auteur {
+  font-style: italic;
+}
+
+.nom-auteur {
+  font-size: 1em;
+}
+
+h1 {
+  padding: 1em;
+}
+
+.btn-vote {
+  color: #FFC0CB;
+
+}
+
+.Negative {
+  border: 1px solid blue;
+}
+
+#menu a {
+  display: block;
+  width: 100%;
+  color: white;
+  background-color: #FFC0CB;
+  margin: 5px;
+  padding: .5em;
+  margin-right: 0;
+  text-align: center;
+}
+
+.solved {
+  color: #BC8F8F;
+}
+
+.delete {
+  color: #DC143C;
+
+}
+
+.btn-vote, .delete, .solved {
+  padding: 1em;
+}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Sujet Single' %}
+
+{% block body %}
+
+
+{{ include('subjects/subjects_single.html.twig', { 'subject': subject }) }}
+
+
+<h2>Commentaires </h2>
+    {% for reply in subject.replies %}
+        {{ include('subjects/reply_single.html.twig', { 'reply': reply }) }}
+
+    {% endfor %}
+
+
+
+<div class="formulaire">
+  <h3>Laisser un commentaire </h3>
+  <form action="{{ path('subject_single', {id:subject.id}) }}" method="POST" novalidate="novalidate">
+    {{ form_widget(form) }}
+
+    <button type="submit">Publier </button>
+    </form>
+</div>
+{% endblock %}
